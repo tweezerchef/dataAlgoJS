@@ -21,9 +21,15 @@ function validAnagram(str1, str2){
             strObj2[char2]++
         }
     }
+    for(let key in strObj1){
+        if(strObj1[key] !== strObj2[key]){
+            return false
+        }
+    }
 
     return true
 }
-console.log('poop')
-validAnagram('rat', 'car')
-validAnagram('aaz', 'zza')
+console.log(validAnagram('rat', 'cat'))
+console.log(validAnagram('aaz', 'zza'))
+console.log(validAnagram('rat', 'cat'))
+console.log(validAnagram('texttwisttime', 'timetwisttext'))
