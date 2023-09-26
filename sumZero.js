@@ -1,7 +1,7 @@
 // write a function sumZero which finds the first pair in a sorted array
 //and returns them as an array with 0(n) time complexity return "not" if not
 //found
-
+console.time();
 function sumZero(numArray, point1 = 0, point2 = numArray.length -1){
     //establish pointers
 //if we have completed array sum not found return 'not'
@@ -23,4 +23,6 @@ return sumZero(numArray, point1, point2)
 sumZero(numArray, point1, point2)
 }
 
-console.log(sumZero([-4,-2,-2,-1,0,1,2,5]))
+
+console.log(sumZero([-4, -3, -2, -1.5, 0, 1, 5, 10]))
+console.timeEnd();
