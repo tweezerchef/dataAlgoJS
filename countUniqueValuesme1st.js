@@ -4,7 +4,6 @@
 function countUniqueValues(arr){
     let count = 0
     if(arr.length === 0){
-        console.log(count)
         return count
     }
     for(let i = 0; i < arr.length; i++){
@@ -12,7 +11,6 @@ function countUniqueValues(arr){
             count++
         }
     }
-    console.log(count)
     return count
 }
 
