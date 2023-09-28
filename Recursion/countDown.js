@@ -1,7 +1,11 @@
 // basic basic basic recursion
 
 function countDown(num){
-    if(num <= 9){
+    if(typeof num !== 'number'){
+        console.log('Use a number for this function you FOOL!')
+        return
+    }
+    if(num <= 0){
         console.log('All Done');
         return;
     }
@@ -11,3 +15,4 @@ function countDown(num){
 }
 
 countDown('thing')
+countDown(10)
