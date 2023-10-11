@@ -1,7 +1,16 @@
-/*
-Write a function called binarySearch which accepts a sorted array and a value and returns the index at which the value exists. Otherwise, return -1.
-*/
 const binarySearch = (numArr, numS) => {
+    if (!Array.isArray(numArr) || typeof numS !== 'number') {
+        throw new Error('Invalid inputs. numArr must be an array and numS must be a number.');
+    }
+
+    if (numArr.length === 0) {
+        return -1;
+    }
+
+    if (!isSorted(numArr)) {
+        throw new Error("Array is not sorted");
+    }
+
     let left = 0;
     let right = numArr.length - 1;
 
@@ -18,6 +27,15 @@ const binarySearch = (numArr, numS) => {
     }
 
     return -1;
+}
+
+const isSorted = (arr) => {
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < arr[i - 1]) {
+            return false;
+        }
+    }
+    return true;
 }
 console.log(binarySearch([1,2,3,4,5],2))
 console.log(binarySearch([
