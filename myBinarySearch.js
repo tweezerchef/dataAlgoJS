@@ -10,7 +10,6 @@ const binarySearch = (numArr, numS) => {
         if (numArr[mid] === numS) {
             return mid;
         }
-
         if (numS > numArr[mid]) {
             left = mid + 1;
         } else {
